@@ -25,4 +25,25 @@ public class DriverManager {
         driver.manage().window().maximize();
         return driver;
     }
+
+/*
+*
+* BELOW CODE IS USED WHEN USING THREADLOCAL Class
+* INSTEAD OF PICOCONTAINER DEPENDENCY INJECTION (DI) TO SUPPORT PARALLEL EXECUTION
+*
+*/
+
+//    private static final ThreadLocal<WebDriver> driver = new ThreadLocal<>();
+//
+//    public static WebDriver getDriver() {
+//        return driver.get();
+//    }
+//
+//    public static void setDriver(WebDriver driverInstance) {
+//        driver.set(driverInstance);
+//    }
+//
+//    public static void unload() {
+//        driver.remove();
+//    }
 }

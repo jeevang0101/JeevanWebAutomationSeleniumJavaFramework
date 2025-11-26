@@ -18,6 +18,7 @@ public class Hooks {
     public void beforeScenario(){
         driver = DriverManager.initializeDriver(System.getProperty("browser", "chrome"));
         testContext.driver = driver;
+       // DriverManager.setDriver(driver); // STEP IS USED WHEN USING THREADLOCAL Class instead Picocontainer Dependancy injection to support parallel execution
     }
 
     @After
